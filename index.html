@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Museum</title>
+    <link rel="stylesheet" href="styles/geral.css">
+    <link rel="stylesheet" href="styles/@media.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="styles/landscape.css" media="screen and (orientation: landscape)">
+    <link rel="stylesheet" href="styles/portrait.css" media="screen and (orientation: portrait)">
+</head>
+<body>
+    <div id="pagina">
+        <header>
+            <h1>ArtMuseum</h1>
+            <nav id="opcoesPC">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>               
+            </nav>
+            <div id="menuMobile" onclick="abrirOpcoes()">
+                <img src="../ArteMuseum/images/menuIcon.svg" alt="">
+            </div>  
+        </header>
+            <nav id="opcoesMobile">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        <main>
+            Destaques da Semana<hr>
+            <main id="segunda">
+            <h3>Elisabeth</h3>
+            <picture>
+                <source srcset="../ArteMuseum/images/elizabethMenor.png" media="screen and(max-width:768px)">
+                <img src="../ArteMuseum/images/elizabeth.jpg" alt="fotografando">   
+            </picture> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi rerum earum blanditiis esse pariatur vero nisi laudantium dolores porro? Eveniet enim ratione autem asperiores laboriosam beatae ipsa nam rem pariatur.</p>
+            <button type="submit" id="botao">Ver Sobre</button>
+            </main> 
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dignissimos iusto accusamus totam beatae fugiat inventore nemo maiores, explicabo iste. Repellendus nobis id nemo sapiente dolores officia ad adipisci perferendis.</p> 
+            Artes<hr>
+        </main>
+        <footer>ArtMuseum @2023</footer>
+    </div>
+    <script>
+        function abrirOpcoes(){
+            if(opcoesMobile.style.display=="none"){
+                opcoesMobile.style.display="flex"
+            }else{
+                opcoesMobile.style.display="none"
+            }
+        }
+    </script>          
+</body>
+</html>
