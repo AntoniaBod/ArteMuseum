@@ -2,60 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arte Museum</title>
+    <title>ArteMuseu</title>
     <link rel="stylesheet" href="styles/geral.css">
-    <link rel="stylesheet" href="styles/@media.css" media="screen and (max-width: 768px)">
-    <link rel="stylesheet" href="styles/landscape.css" media="screen and (orientation: landscape)">
-    <link rel="stylesheet" href="styles/portrait.css" media="screen and (orientation: portrait)">
+    <link rel="stylesheet" href="styles/@media.css" media="screen and (max-width : 768px)">
 </head>
 <body>
     <div id="pagina">
         <header>
             <h1>ArtMuseum</h1>
-            <nav id="opcoesPC">
+            <nav id="menuPc">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Galeria</a></li>
                     <li><a href="#">Contato</a></li>
-                </ul>               
-            </nav>
-            <div id="menuMobile" onclick="abrirOpcoes()">
-                <img src="../ArteMuseum/images/menuIcon.svg" alt="">
-            </div>  
-        </header>
-            <nav id="opcoesMobile">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Galeria</a></li>
-                    <li><a href="#">Contato</a></li>
                 </ul>
             </nav>
+            <div id="menuIcon" onclick="abrirMenu()">
+                <img class="imagem" src="images/menuIcon.svg">
+            </div>
+        </header>
+        <nav id="menuMobile">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
         <main>
-            Destaques da Semana<hr>
-            <main id="segunda">
-            <h3>Elisabeth</h3>
-            <picture>
-                <source srcset="../ArteMuseum/images/elizabethMenor.png" media="screen and(max-width:768px)">
-                <img src="../ArteMuseum/images/elizabeth.jpg" alt="fotografando">   
-            </picture> 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi rerum earum blanditiis esse pariatur vero nisi laudantium dolores porro? Eveniet enim ratione autem asperiores laboriosam beatae ipsa nam rem pariatur.</p>
-            <button type="submit" id="botao">Ver Sobre</button>
-            </main> 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dignissimos iusto accusamus totam beatae fugiat inventore nemo maiores, explicabo iste. Repellendus nobis id nemo sapiente dolores officia ad adipisci perferendis.</p> 
-            Artes<hr>
+            <h2>DESTAQUE DA SEMANA</h2>
+            <hr>
+            <div id="destaque">
+                <h3>Elizabeth</h3>
+                <picture>
+                    <source class="imagem" srcset="images/elizabethMenor.png" media="screen and (max-width : 768px)">
+                    <source class="imagem" srcset="images/elizabethLandscape.png" media="screen and ( orientation : landscape) and (max-height : 500px)">
+                    <img class="imagem" src="../ArteMuseum/images/elizabeth.jpg" alt="">
+                </picture>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, deserunt amet? Quibusdam repellat repellendus distinctio perferendis nobis minima possimus! Alias aut nostrum mollitia voluptatibus porro. Aliquid itaque sint quaerat quam.</p>
+                <button type="button">Ver sobre</button>
+            </div>
+            <p id="textoPagina">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quia ad iusto veritatis quisquam, tempore odit architecto. Voluptates totam autem, repudiandae optio inventore eveniet earum nam rerum, doloribus repellendus perspiciatis!</p>
+            <h2>ARTES</h2>
+            <hr>
+
+            <section id="galeria">
+                <div class="post">
+                    <h5>TITULO DA ARTE</h5>
+                    <img class="imagem" src="images/arte1.jpg" alt="">
+                    <p>descricao da arte</p>
+                    <button type="button">Ver mais</button>
+                </div>
+                <div class="post">
+                    <h5>TITULO DA ARTE</h5>
+                    <img class="imagem" src="images/arte2.jpg" alt="">
+                    <p>descricao da arte</p>
+                    <button type="button">Ver mais</button>
+                </div>
+                <div class="post">
+                    <h5>TITULO DA ARTE</h5>
+                    <img class="imagem" src="images/arte3.jpg" alt="">
+                    <p>descricao da arte</p>
+                    <button type="button">Ver mais</button>
+                </div>
+            </section>
         </main>
-        <footer>ArtMuseum @2023</footer>
+        <footer></footer>
     </div>
     <script>
-        function abrirOpcoes(){
-            if(opcoesMobile.style.display=="none"){
-                opcoesMobile.style.display="flex"
+        function abrirMenu(){
+            if(menuMobile.style.display == "none"){
+                menuMobile.style.display = "flex";
             }else{
-                opcoesMobile.style.display="none"
+                menuMobile.style.display = "none";
             }
-        }
-    </script>          
+        }    
+    </script>
 </body>
 </html>
